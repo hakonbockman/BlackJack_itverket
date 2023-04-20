@@ -1,17 +1,18 @@
 package no.itverket;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
+import java.util.ArrayList;
+import java.util.List;
 
 class Deck {
-    Queue<Card> cards;
+    List<Card> cards;
 
     Deck() {
-        cards = new ArrayDeque<>();
+        cards = new ArrayList<>();
         for (Suit suit : Suit.values()) {
             for (int i = 1; i < 14; i++) {
-                cards.offer(new Card(suit, i));
+                cards.add(new Card(suit, i));
             }
         }
     }
+
 }
